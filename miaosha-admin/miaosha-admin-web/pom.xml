@@ -21,6 +21,12 @@
 			<artifactId>miaosha-admin-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.geekq</groupId>
+			<artifactId>miaosha-admin-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- freemarker -->
 		<dependency>
 			<groupId>org.freemarker</groupId>
@@ -31,12 +37,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring</artifactId>
-				</exclusion>
-			</exclusions>
+			<version>2.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>

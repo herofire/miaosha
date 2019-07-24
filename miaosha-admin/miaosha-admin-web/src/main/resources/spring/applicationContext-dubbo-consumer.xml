@@ -6,7 +6,7 @@
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 		
 	<!-- 为当前服务提供者取个名字，并且提供给注册中心 -->
-	<dubbo:application name="imooc-dubbo-web"></dubbo:application>
+	<dubbo:application name="miaosha-dubbo-web"></dubbo:application>
 	
 	<!-- 注册中心的配置，用于消费者的监听 -->
 	<dubbo:registry protocol="zookeeper" address="39.107.245.253:2181"></dubbo:registry>
@@ -19,4 +19,19 @@
 	<dubbo:reference id="iLogininfoService" interface="com.geekq.admin.service.ILogininfoService"
 					 retries="3" check="false" init="true"></dubbo:reference>
 
+	<dubbo:reference id="iUserService" interface="com.geekq.admin.service.IUserService"
+					 retries="3" check="false" init="true"></dubbo:reference>
+
+	<dubbo:reference id="iAccountService" interface="com.geekq.admin.service.IAccountService"
+					 retries="3" check="false" init="true"></dubbo:reference>
+
+
+	<dubbo:reference id="redisCacheStorageService" interface="com.geekq.admin.service.RedisCacheStorageService"
+					 retries="3" check="false" init="true"></dubbo:reference>
+
+	<dubbo:reference id="accountService" interface="com.geekq.admin.service.IAccountService"
+					 retries="3" check="false" init="true"></dubbo:reference>
+
+	<dubbo:reference id="iSystemDictionaryServiceImpl" interface="com.geekq.admin.service.ISystemDictionaryService"
+					 retries="3" check="false" init="true"></dubbo:reference>
 </beans>

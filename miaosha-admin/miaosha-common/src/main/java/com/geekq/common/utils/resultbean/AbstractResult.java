@@ -8,6 +8,7 @@ public class AbstractResult {
     private int code;
     private String message;
 
+    AbstractResult() {}
     protected AbstractResult(ResultStatus status, String message) {
         this.code = status.getCode();
         this.status = status;
@@ -36,6 +37,7 @@ public class AbstractResult {
     }
 
     public AbstractResult withError(int code, String message) {
+        this.status = ResultStatus.SYSTEM_ERROR;
         this.code = code;
         this.message = message;
         return this;
